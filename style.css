@@ -1,0 +1,575 @@
+:root {
+    --cyan: #46ccde;
+    --blue: #1d1b67;
+    --white: #fff;
+    --gray: #425466;
+    --light-cyan: #cdf9ff;
+    --light-blue: #3b60bf;
+    --deep-green: #005661;
+    --black: #000;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    /* padding: 1rem; */
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--gray);
+}
+
+a {
+    color: var(--gray);
+}
+
+
+/* button */
+
+.btn {
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1.2rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #252282;
+}
+
+.btn-secondary {
+    color: var(--gray);
+    text-align: left;
+}
+
+.btn-secondary::after {
+    content: '-->';
+    margin-left: 5px;
+}
+
+.btn-secondary:hover::after {
+    margin-left: 7px;
+    transition: margin .2s ease-in-out;
+}
+
+
+/* link */
+
+a {
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+
+/* hero */
+
+.hero {
+    margin: 0;
+}
+
+.hero-content {
+    margin: 1rem;
+}
+
+.hero-heading {
+    color: var(--blue);
+    text-align: left;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.hero-text {
+    color: var(--gray);
+    text-align: left;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.hero-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-info {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.hero-info::before {
+    content: url(/images/Shield.svg);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.learn-more {
+    margin-top: 0;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    text-decoration: underline;
+    margin-left: 30px;
+    font-size: 1.2rem;
+}
+
+.hero-picture {
+    background-color: var(--cyan);
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .grid2x2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+    .hero-picture {
+        margin-top: 0;
+    }
+}
+
+
+/* influentials */
+
+.inf {
+    margin: 2rem;
+}
+
+.inf-content {
+    margin: 0;
+    padding: 0;
+}
+
+.inf-heading {
+    color: var(--blue);
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.inf-images {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.inf-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 961px) {
+    .inf-content {
+        display: flex;
+        margin-bottom: 0;
+        justify-content: flex-end;
+        align-self: flex-end;
+    }
+    .inf-heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1281px) {
+    .grid1x2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        width: 1281px;
+        column-gap: 5px;
+    }
+}
+
+
+/* dashboard */
+
+.dashboards {
+    background-color: var(--light-cyan);
+    /* display: flex; */
+    color: var(--deep-green);
+    padding: 2rem 3rem;
+}
+
+.dash-top {
+    color: var(--light-blue);
+    font-size: 1rem;
+}
+
+.dashboard .btn {
+    margin-bottom: 3rem;
+}
+
+.dash-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .dashboards {
+        display: flex;
+        column-gap: 50px;
+    }
+}
+
+
+/* input-group */
+
+.input-group {
+    border: 1px solid var(--gray);
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#email {
+    outline: none;
+    border: none;
+    flex-grow: 1;
+    width: 100%;
+}
+
+#email::placeholder {
+    line-height: 1.5;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+/* list */
+
+ul {
+    list-style: none;
+    white-space: nowrap;
+}
+
+li {
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.list-item:first-child {
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.list-item {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.wrap {
+    display: flex;
+}
+
+.tweet-header {
+    color: var(--black);
+    margin: 2.5rem;
+}
+
+.mob-hide {
+    display: none;
+}
+
+@media (min-width: 961px) {
+    .mob-hide {
+        display: block;
+    }
+    .desk-hide {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .wraps {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .tweet-header {
+        margin-right: 4rem;
+    }
+    .tweet {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 961px) {
+    .tweet-header {
+        margin-top: 30px;
+    }
+    .tweet {
+        margin-top: 0;
+    }
+}
+
+
+/* logo */
+
+.logo-mid {
+    margin-left: 2.5rem;
+}
+
+
+/* navBar */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.nav-ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list {
+    margin-right: 1rem;
+}
+
+.nav-content {
+    display: flex;
+}
+
+
+/* for the nav */
+
+.mobile-hide {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-hide {
+        display: flex;
+        margin-right: .9rem;
+        justify-content: flex-start;
+    }
+    .tab-hide {
+        display: none;
+    }
+    .flex {
+        justify-content: center;
+    }
+}
+
+.hero-picture .btn {
+    width: 70%;
+    margin-bottom: 5rem;
+}
+
+@media (min-width:320px) {
+    .dropdown {
+        display: none;
+        flex-direction: column;
+        display: flex;
+        font-size: 1.2rem;
+    }
+}
+
+.hideit {
+    display: none;
+}
+
+
+/* pricing page  */
+
+.nav-pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-menu-pricing {
+        display: none;
+    }
+    .nav-pricing .btn {
+        width: 100%;
+    }
+    .nav-pricing {
+        margin: 0;
+    }
+}
+
+.bill:last-of-type {
+    margin-left: 2rem;
+}
+
+
+/* pricing words */
+
+.price-heading {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--black);
+    font-weight: 700;
+    margin: 1rem 4rem;
+}
+
+.price-text {
+    text-align: center;
+    font-weight: 500;
+}
+
+.billing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    margin: 0 auto;
+}
+
+.container {
+    padding: .1rem .2rem;
+    background-color: dodgerblue;
+    width: 52px;
+    height: 29px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.wrapped {
+    margin: 1rem;
+}
+
+
+/* card section */
+
+.card {
+    border: 1px solid var(--gray);
+    padding: 1rem;
+    padding-bottom: 0;
+    width: 100%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card .btn {
+    margin-bottom: 1rem;
+}
+
+.year {
+    color: var(--gray);
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.dollar {
+    color: var(--black);
+}
+
+.card-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.card-sub {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.card-sub::before {
+    content: url(/images/Checkmark.svg);
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.card-hide-tab {
+    display: hide;
+}
+
+.card-hide-desk {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .double {
+        display: flex;
+        width: 100%;
+    }
+    .mg2 {
+        margin-bottom: 5.5rem;
+    }
+    section {
+        margin: 4rem;
+    }
+}
+
+@media (min-width:1281px) {
+    .triple {
+        display: flex;
+    }
+    .card-hide-desk {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-hide-tab {
+        display: none;
+    }
+}
+
+.mg1 {
+    margin-top: 3rem;
+    margin-left: 0;
+}
+
+section {
+    margin: 2rem;
+}
+
+.dropdown {
+    animation-name: drop;
+    animation-duration: .5s;
+}
+
+@keyframes drop {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
