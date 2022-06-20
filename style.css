@@ -423,6 +423,9 @@ li {
     .nav-pricing {
         margin: 0;
     }
+    .price-heading {
+        font-size: 2.5rem;
+    }
 }
 
 .bill:last-of-type {
@@ -433,7 +436,7 @@ li {
 /* pricing words */
 
 .price-heading {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-align: center;
     color: var(--black);
     font-weight: 700;
@@ -449,16 +452,15 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 200;
     margin: 0 auto;
 }
 
 .container {
     padding: .1rem .2rem;
     background-color: dodgerblue;
-    width: 52px;
-    height: 29px;
-    border-radius: 20px;
+    width: 6rem;
+    height: 2.1rem;
+    border-radius: 40px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -466,8 +468,8 @@ li {
 }
 
 .circle {
-    width: 20px;
-    height: 20px;
+    width: 1.3rem;
+    height: 1.3rem;
     border-radius: 100%;
     background-color: white;
 }
@@ -588,4 +590,18 @@ section {
 .nav-menu:focus {
     border: 3px solid var(--blue);
     border-radius: 5px;
+}
+
+.container-sec {
+    background-color: var(--gray);
+    justify-content: flex-end;
+}
+
+.hide-bill {
+    display: none;
+}
+
+.bill1,
+.bill2 {
+    opacity: .2;
 }
