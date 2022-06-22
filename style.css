@@ -281,12 +281,12 @@ li {
 
 .list-item:first-child {
     color: var(--black);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
 .list-item {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
